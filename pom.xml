@@ -194,7 +194,7 @@
 					<range>1</range>
 
 					<headingDateFormat>MM-dd-yyyy</headingDateFormat>
-					<outputEncoding>${project.reporting.outputEncoding}</outputEncoding>
+
 
 				</configuration>
 				<!--		<reports>
@@ -207,7 +207,7 @@
 				<version>3.4.1</version>
 				<configuration>
 					<dependencyDetailsEnabled>false</dependencyDetailsEnabled>
-					<dependencyLocationsEnabled>false</dependencyLocationsEnabled>
+
 				</configuration>
 				<!-- simpler configuration without reportSets available for usual cases -->
 				<!-- distribution-management, index, dependencies, help, issue-tracking, plugins, cim,
@@ -226,7 +226,7 @@
 				<artifactId>maven-jxr-plugin</artifactId>
 				<version>3.3.0</version>
 				<configuration>
-					<aggregate>true</aggregate>
+
 				</configuration>
 			</plugin>
 			<plugin>
@@ -237,11 +237,7 @@
 					<sourceFileIncludes>
 						src/main/java/**/*.java
 					</sourceFileIncludes>
-					<reports>
-						<report>javadoc</report>
-						<report>aggregate</report>
-						<failOnError>false</failOnError>
-					</reports>
+
 				</configuration>
 
 			</plugin>
