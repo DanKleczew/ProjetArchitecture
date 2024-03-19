@@ -1,5 +1,6 @@
 package fr.pantheonsorbonne.cri;
 
+import java.sql.Date;
 import java.util.ArrayList;
 
 public class Artist extends User{
@@ -16,12 +17,12 @@ public class Artist extends User{
         this.setPhotoLink(photoLink);
     }
 
-    public void createArtwork(String name, int[] dimensions, String typeArtwork){
+    public void createArtwork(String name, int[] dimensions, String typeArtwork, Date creationDate, Museum currentMuseum, int estimatedPriceInCents) throws ArtworkNameDoesNotExist{
         Artwork newArtwork;
 
         switch (typeArtwork){
             case "Painting":
-                newArtwork = new Painting(name, Integer.MIN_VALUE, new Artist[]{this}, null, dimensions);
+                newArtwork = new Painting(name, Integer.MIN_VALUE, new Artist[]{this}, currentMuseum, dimensions, creationDate);
             default :
                 throw new ArtworkNameDoesNotExist("The artwork type '"+ typeArtwork +"' does not exist");
         }
